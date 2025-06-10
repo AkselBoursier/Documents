@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\title{Perturbations Lin\'eaires du Champ Rythmique en Cosmologie FLRW}
+\author{Aksel Boursier}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Cadre de Perturbation FLRW}
+
+Nous adoptons la jauge de Newton pour la m\'etrique perturb\'ee :
+\begin{equation}
+    ds^2 = -(1 + 2\Phi) dt^2 + a^2(t)(1 - 2\Psi) \delta_{ij} dx^i dx^j,
+\end{equation}
+o\`u $\Phi$ et $\Psi$ sont les potentiels de Bardeen.
+
+\section*{2. Perturbation du Champ Temporel $T(x^\mu)$}
+
+On d\'ecompose le champ scalaire objectif $T$ comme :
+\begin{equation}
+    T(x^\mu) = T_0(t) + \delta T(t, \vec{x}).
+\end{equation}
+Sa norme donne le champ rythmique :
+\begin{equation}
+    R^2(x) = -g^{\mu\nu} \partial_\mu T \partial_\nu T.
+\end{equation}
+
+Dans le fond homog\`ene : $R_0^2(t) = \dot{T}_0^2$.\newline
+La perturbation de $R^2$ s'\'ecrit :
+\begin{equation}
+    \delta R^2 = 2 \dot{T}_0 ( \delta\dot{T} - \dot{T}_0 \Phi ).
+\end{equation}
+
+\section*{3. Perturbation du Tenseur $C_{\mu\nu}$}
+
+Supposons un tenseur d'origine :
+\begin{equation}
+    C_{\mu\nu} = f(R^2) g_{\mu\nu} + h(R^2) \partial_\mu T \partial_\nu T.
+\end{equation}
+Les composantes perturb\'ees \`a premier ordre sont :
+\begin{align}
+    \delta C_{00} &= -f'(R_0^2) \delta R^2 + 2 h(R_0^2) \dot{T}_0 \delta\dot{T} + h'(R_0^2) \delta R^2 \dot{T}_0^2, \\
+    \delta C_{0i} &= h(R_0^2) \dot{T}_0 \partial_i \delta T, \\
+    \delta C_{ij} &= f'(R_0^2) \delta R^2 \delta_{ij} + h(R_0^2) \partial_i T \partial_j T \text{ (lin\'earis\'e) }.
+\end{align}
+
+\section*{4. Impact sur les \'Equations de Perturbation}
+
+Les \'equations d'Einstein modifi\'ees s'\'ecrivent :
+\begin{equation}
+    \delta G_{\mu\nu} = 8\pi G \delta T^{(m)}_{\mu\nu} + \delta C_{\mu\nu}.
+\end{equation}
+
+Les contributions $\delta C_{00}$ modifient la contrainte de Poisson.\newline
+Les $\delta C_{ij}$ affectent l'\'evolution de $\Phi$ et $\Psi$.\newline
+Les $\delta C_{0i}$ se couplent aux vitesses de fluide.
+
+\section*{5. Cons\'equences Physiques Attendue}
+
+\begin{itemize}
+    \item \textbf{ISW pr\'ecoce} : $\dot{\Phi}$ modifi\'e \`a grande \'echelle dans le CMB.
+    \item \textbf{Croissance des structures} : $\ddot{\delta}_m + 2H \dot{\delta}_m = 4\pi G_{\text{eff}} \rho \delta_m$ avec $G_{\text{eff}}$ modifi\'e.
+    \item \textbf{Fonction de visibilité} : potentiel impact sur recombinaison via $H(z)$ modifi\'e.
+\end{itemize}
+
+\end{document}

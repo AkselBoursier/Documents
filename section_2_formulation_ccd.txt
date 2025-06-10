@@ -1,0 +1,25 @@
+\section{Formulation du Modèle Chronodynamique Cosmologique}
+
+Le modèle CCD repose sur l'introduction d'un champ scalaire \(T(x^\mu)\), interprété comme un temps objectif et universel. Ce champ génère un rythme local \(R(x)\), mesuré comme la norme covariante de son gradient :
+\begin{equation}
+    R(x) = \sqrt{g^{\mu\nu} \partial_\mu T \partial_\nu T}.
+\end{equation}
+
+Nous postulons que ce rythme influence la géométrie de l'espace-temps via un tenseur additionnel \(C_{\mu\nu}\), ajouté aux équations d'Einstein :
+\begin{equation}
+    G_{\mu\nu} = 8\pi G \left( T^{(m)}_{\mu\nu} + C_{\mu\nu} \right).
+\end{equation}
+
+La forme la plus simple de \(C_{\mu\nu}\) considérée dans le modèle est :
+\begin{equation}
+    C_{\mu\nu} = \alpha \left( \partial_\mu T \partial_\nu T - \frac{1}{2} g_{\mu\nu} g^{\rho\sigma} \partial_\rho T \partial_\sigma T \right) + g_{\mu\nu} V(T),
+\end{equation}
+avec \(\alpha\) un paramètre de couplage rythmique, et \(V(T)\) un potentiel scalaire.
+
+Dans un univers FLRW, le champ \(T\) devient une fonction du temps cosmique seul : \(T(x^\mu) = T(t)\), et \(R(t) = \dot{T}(t)\). Le tenseur \(C_{\mu\nu}\) devient alors diagonal, avec des composantes temporelles et spatiales pouvant s’interpréter comme des contributions à l’énergie et à la pression cosmologiques :
+\begin{align}
+    C^0_0 &= -\frac{\alpha}{2} R^2 + V(T), \\
+    C^i_j &= \left( \frac{\alpha}{2} R^2 + V(T) \right) \delta^i_j.
+\end{align}
+
+Ce formalisme pose les bases pour dériver des régimes cosmologiques modifiés, étudiés dans la section suivante.

@@ -1,0 +1,20 @@
+\section{Trichotomie Cosmologique Induite par le Champ Rythmique}
+
+L'ajout du tenseur \(C_{\mu\nu}\) dans les équations d'Einstein induit une modification de la dynamique d'expansion. En particulier, le terme \(C^0_0\) modifie l'équation de Friedmann selon :
+\begin{equation}
+    H^2 = \frac{8\pi G}{3} \left( \rho_m + \rho_r + \rho_R \right),
+\end{equation}
+avec :
+\begin{equation}
+    \rho_R = -C^0_0 = \frac{\alpha}{2} R^2 - V(T).
+\end{equation}
+
+L’analyse des régimes asymptotiques permet d’identifier trois comportements universels :
+
+\begin{itemize}
+    \item \textbf{Régime I (dominance rythmique, \(\dot{T}^2 \gg V\))} : correspond à une phase de type inflationnaire (\(w \simeq -1\)) si \(V(T) \approx \text{const.}\).
+    \item \textbf{Régime II (équilibre dynamique, \(\dot{T}^2 \sim V\))} : reproduit un comportement de type fluide de matière (\(w \simeq 0\)).
+    \item \textbf{Régime III (ralentissement rythmique, \(\dot{T}^2 \ll V\))} : génère une accélération tardive (\(w < -1/3\)), mimant l’effet d’une constante cosmologique.
+\end{itemize}
+
+Cette trichotomie structure naturellement l’histoire cosmique, sans avoir besoin d’introduire plusieurs composants exotiques distincts. La transition entre régimes dépend de la forme de \(V(T)\) et de la solution dynamique de \(T(t)\), étudiée numériquement dans la section 4.

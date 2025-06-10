@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+% Classe de document standard avec police de 11 points
+
+% Encodage UTF-8 pour les caractères accentués
+\usepackage[utf8]{inputenc}
+
+% Packages mathématiques et graphiques
+\usepackage{amsmath, amssymb, graphicx}
+
+% Pour gérer les citations bibliographiques
+\usepackage{natbib}
+
+% Définition de la géométrie de la page (A4 avec marges de 2.5cm)
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% Titre, auteur et date de l’article
+\title{Une Approche Chronodynamique de la Cosmologie : Dynamique Temporelle et Signatures Observationnelles}
+\author{Aksel Boursier}
+\date{\today}
+
+\begin{document}
+
+% Génère le titre avec auteur et date
+\maketitle
+
+% Résumé de l’article, résumant le modèle et ses implications observationnelles
+\begin{abstract}
+Nous proposons un modèle alternatif au paradigme \( \Lambda \)CDM, dans lequel la constante cosmologique est remplacée par un tenseur \( C_{\mu\nu} \) dérivé d’un champ rythmique scalaire \( R(t) \), incarnant une dynamique temporelle intrinsèque. Ce modèle engendre une trichotomie naturelle des régimes cosmologiques, affecte les lois de conservation et produit des signatures testables sur \( H(z) \), le CMB et la croissance des structures. Nous en dérivons une formulation covariante complète, intégrons ses effets dans le code CLASS, et confrontons les résultats aux observations récentes (Planck, DESI, JWST).
+\end{abstract}
+
+% Insertion des fichiers contenant les sections principales du document
+\input{section1_introduction}        % Introduction
+\input{section2_formulation_ccd}    % Formulation du modèle CCD
+\input{section2b_covariant_T}       % Champ temporel covariant
+\input{section3_trichotomie}        % Trichotomie cosmologique
+\input{section3b_perturbations}     % Perturbations linéaires
+\input{section4_resultats_numeriques_ccd} % Résultats numériques
+\input{section5_discussion_ccd}     % Discussion théorique et observationnelle
+\input{section6_conclusion_ccd}     % Conclusion générale
+
+% Insertion de la bibliographie à l’aide du fichier .bib associé
+\bibliographystyle{unsrt}
+\bibliography{bibliographie_ccd}
+
+\end{document}

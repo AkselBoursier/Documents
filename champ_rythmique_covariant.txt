@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\title{Formulation Covariante du Champ Rythmique Cosmologique}
+\author{Aksel Boursier}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Introduction Conceptuelle}
+
+Nous considérons un champ scalaire $T(x^\mu)$ représentant un \textit{temps objectif universel}, distinct du temps propre local $\tau$. La norme de son gradient définit un champ rythmique scalaire :
+\begin{equation}
+R(x) := \left( g^{\mu\nu} \nabla_\mu T \nabla_\nu T \right)^{1/2}.
+\end{equation}
+Ce champ mesure localement le "flux" du temps objectif à travers la structure métrique.
+
+\section*{2. Lagrangien Covariant du Champ Temporel}
+
+Le Lagrangien canonique minimal associé à $T(x)$ est :
+\begin{equation}
+\mathcal{L}_T = -\frac{\alpha}{2} g^{\mu\nu} \nabla_\mu T \nabla_\nu T - V(T),
+\end{equation}
+où $\alpha > 0$ est un paramètre d'intensité rythmique, et $V(T)$ est un potentiel scalaire.
+
+\section*{3. Équation du Mouvement}
+
+L'équation d'Euler–Lagrange pour $T$ donne :
+\begin{equation}
+\alpha \Box T = \frac{dV}{dT},
+\end{equation}
+où $\Box := \nabla^\mu \nabla_\mu$ est l'opérateur d'Alembert.
+
+\section*{4. Tenseur d'Énergie–Impulsion Chronodynamique}
+
+La variation du lagrangien par rapport à la métrique fournit le tenseur d'énergie–impulsion associé :
+\begin{equation}
+C_{\mu\nu} = \alpha \left( \nabla_\mu T \nabla_\nu T - \frac{1}{2} g_{\mu\nu} \nabla_\lambda T \nabla^\lambda T \right) + g_{\mu\nu} V(T).
+\end{equation}
+
+Il peut s'écrire en utilisant $R^2(x) = \nabla_\lambda T \nabla^\lambda T$ :
+\begin{equation}
+\boxed{C_{\mu\nu} = \alpha \tau_{\mu\nu} + g_{\mu\nu} \left( V(T) - \frac{\alpha}{2} R^2(x) \right)},
+\end{equation}
+avec $\tau_{\mu\nu} := \nabla_\mu T \nabla_\nu T$.
+
+\end{document}
