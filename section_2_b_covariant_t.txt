@@ -1,0 +1,25 @@
+\section{Formulation Covariante du Champ Temporel \texorpdfstring{$T(x^\mu)$}{T(x^mu)}}
+
+Dans une approche g\'eom\'etriquement compl\`ete du mod\`ele CCD, nous g\'en\'eralisons le champ scalaire temporel \(T\) \`a un champ covariant sur l'espace-temps, sans d\'ependance a priori \`a la m\'etrique FLRW. Le champ \(T(x^\mu)\) devient une entit\'e dynamique fond\'ee sur la norme de son gradient :
+\begin{equation}
+    R^2(x) = g^{\mu\nu} \nabla_\mu T \nabla_\nu T.
+\end{equation}
+
+Nous d\'efinissons une action minimale de type Klein-Gordon, contr\^ol\'ee par un param\`etre de rigidit\'e temporelle \(\alpha\) :
+\begin{equation}
+    S_T = \int d^4x \sqrt{-g} \left[ -\frac{\alpha}{2} g^{\mu\nu} \nabla_\mu T \nabla_\nu T - V(T) \right].
+\end{equation}
+
+L'\'equation d'Euler--Lagrange associ\'ee devient :
+\begin{equation}
+    \alpha \Box T = \frac{dV}{dT}.
+\end{equation}
+
+Le tenseur d'\'energie-moment issu de cette action est donn\'e par :
+\begin{equation}
+    C_{\mu\nu} = \alpha \left( \nabla_\mu T \nabla_\nu T - \frac{1}{2} g_{\mu\nu} \nabla^\lambda T \nabla_\lambda T \right) + g_{\mu\nu} V(T).
+\end{equation}
+
+Ce tenseur poss\`ede la structure d’un fluide scalaire \`a vitesse propre d\'efinie par le gradient du champ \(T\), ce qui permet d’en extraire des analogues de pression, densit\'e et vecteur de flux d’\'energie dans n’importe quelle g\'eom\'etrie de fond.
+
+Cette version covariante permet une impl\'ementation g\'en\'erale dans les codes num\'eriques ainsi qu'une interpr\'etation g\'eom\'etrique profonde du rythme comme g\'en\'erateur dynamique de la structure causale.

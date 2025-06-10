@@ -1,0 +1,27 @@
+\section{Discussion et Perspectives}
+
+Le modèle CCD propose une approche unificatrice où le temps cosmique devient une entité dynamique génératrice d'effets géométriques macroscopiques. Cette structure se distingue radicalement des modèles à champ scalaire conventionnels, notamment par l’absence de couplage minimal direct au contenu matière, et par sa motivation conceptuelle : redonner au temps un statut fondamental dans la dynamique gravitationnelle.
+
+\subsection{Nature géométrique et interprétation physique}
+Le tenseur \(C_{\mu\nu}\) ne représente pas une nouvelle forme de matière ou d'énergie, mais une contribution géométrique émergeant du champ rythmique \(T(x^\mu)\). Cela ouvre la voie à une relecture du problème de la constante cosmologique : celle-ci devient effective, modulée dynamiquement par le rythme de l'Univers.
+
+\subsection{Liens avec les tensions observationnelles}
+Le modèle CCD peut atténuer la tension sur \(H_0\) en introduisant une phase d’expansion rythmique modifiée entre recombinaison et aujourd’hui. Il pourrait également réduire \(\sigma_8\) via une croissance plus lente induite par \(C_{ij}\) dans les équations de perturbation.
+
+\subsection{Extensions théoriques}
+Des extensions naturelles incluent :
+\begin{itemize}
+    \item une formulation canonique complète avec action pour \(T\), incluant des termes non linéaires \(f(R^2)\),
+    \item l’étude de solutions statiques et des tests de gravité locale,
+    \item une quantification effective du champ rythmique pour explorer son rôle à l’échelle de Planck.
+\end{itemize}
+
+\subsection{Voies expérimentales}
+À court terme, les signatures CCD peuvent être testées via :
+\begin{itemize}
+    \item les sondes géométriques \(H(z)\), \(D_A(z)\), \(r_s(z)\),
+    \item les spectres de puissance CMB et lentilles gravitationnelles,
+    \item les analyses de croissance structurelle \(f\sigma_8(z)\) et ISW.
+\end{itemize}
+
+Ces pistes offrent un programme cohérent de recherche pour tester la validité de la chronodynamique cosmologique dans le cadre des données actuelles et futures.

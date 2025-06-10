@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, listings}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\title{Impl\'ementation du Mod\`ele Chronodynamique Cosmologique (CCD) dans CLASS}
+\author{Aksel Boursier}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Plan Technique de Modification du Code CLASS}
+
+\subsection*{1. Objectifs}
+\begin{itemize}
+    \item Introduire un champ rythmique $R(t) = \dot{T}(t)$ et son effet via le tenseur $C_{\mu\nu}$ dans les \texttt{\'equations de Friedmann}.
+    \item Ajouter les perturbations $\delta T$ et $\delta C_{\mu\nu}$ dans les modules de perturbations.
+    \item Rendre les param\`etres du CCD configurables via `params.ini`.
+\end{itemize}
+
+\section*{2. Modifications \`a Apporter}
+
+\subsection*{2.1 background.h}
+
+Ajout dans la structure \texttt{background} :
+\begin{lstlisting}[language=C]
+double T0;        // Champ temporel objectif
+double alpha;     // Couplage cinétique CCD
+double ktilde;    // Paramètre de modulation
+double V0;        // Potentiel constant V(T)
+bool use_ccd;     // Flag pour activer CCD
+\end{lstlisting}
+
+\subsection*{2.2 background.c}
+
+\textbf{Dans background\_init:}
+\begin{lstlisting}[language=C]
+if (pba->use_ccd == _TRUE_) {
+  pba->T0 = 1.0;             // Valeur initiale de T(t)
+  pba->V0 = 1e-6;            // Valeur du potentiel constant V(T)
+  pba->alpha = 1e-3;         // Couplage CCD
+  pba->ktilde = 1e-2;        // Paramètre dynamique
+}
+\end{lstlisting}
+
+\textbf{Ajout dans background\_functions pour inclure $\rho_{\text{CCD}}$ :}
+\begin{lstlisting}[language=C]
+double rho_ccd = 0.0;
+if (pba->use_ccd == _TRUE_) {
+  double dT_dt = pba->T0; // ici simplifié, à rendre dynamique
+  rho_ccd = 0.5 * pba->alpha * dT_dt * dT_dt + pba->V0;
+}
+\end{lstlisting}
+
+\textbf{Modification de la densité totale :}
+\begin{lstlisting}[language=C]
+rho_tot = rho_r + rho_m + rho_lambda + rho_ccd;
+\end{lstlisting}
+
+\subsection*{2.3 perturbations.c}
+
+\textbf{Déclaration :}
+\begin{lstlisting}[language=C]
+double delta_T, ddelta_T_dt;
+double delta_C00, delta_C0i, delta_Cij;
+\end{lstlisting}
+
+\textbf{Équation de perturbation de T :}
+\begin{lstlisting}[language=C]
+ddelta_T_dt = ... // équation de Klein-Gordon perturbée
+\end{lstlisting}
+
+\textbf{Calcul des composantes perturbées :}
+\begin{lstlisting}[language=C]
+delta_R2 = 2 * dT_dt * (ddelta_T_dt - dT_dt * phi);
+
+f_prime = ...; h = ...; h_prime = ...;
+
+// Exemples :
+delta_C00 = -f_prime * delta_R2 + 2 * h * dT_dt * ddelta_T_dt + h_prime * delta_R2 * dT_dt * dT_dt;
+delta_C0i = h * dT_dt * ddelta_T_dx[i];
+\end{lstlisting}
+
+\textbf{Injection dans l'équation de Poisson :}
+\begin{lstlisting}[language=C]
+phi_source += delta_C00 / (2. * M_PI * G * a * a);
+\end{lstlisting}
+
+\section*{2.4 input.c et input.h}
+\begin{itemize}
+    \item Ajouter les nouveaux param\`etres :
+\begin{lstlisting}[language=C]
+class_read_double("ccd_alpha", pba->alpha);
+class_read_double("ccd_ktilde", pba->ktilde);
+class_read_double("ccd_V0", pba->V0);
+class_read_flag("use_ccd", pba->use_ccd);
+\end{lstlisting}
+\end{itemize}
+
+\subsection*{2.5 fichier params.ini}
+\begin{verbatim}
+use_ccd = yes
+ccd_alpha = 1.0e-3
+ccd_ktilde = 1.0e-2
+ccd_V0 = 1.0e-6
+\end{verbatim}
+
+\section*{3. Conseils de Validation}
+\begin{itemize}
+    \item Commencer avec $V(T)$ constant pour valider les contributions $\dot{T}^2$ seules.
+    \item Comparer les courbes $H(z)$ et $D_A(z)$ entre \texttt{lcdm} et \texttt{ccd}.
+    \item Ajouter un flag \texttt{use\_ccd = yes/no} pour basculer facilement.
+\end{itemize}
+
+\end{document}

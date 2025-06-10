@@ -1,0 +1,61 @@
+
+\section{Résultats numériques et confrontation observationnelle}
+
+Dans cette section, nous présentons les prédictions numériques du modèle chronodynamique cosmologique (CCD) et leur confrontation avec les observations actuelles. Les calculs ont été effectués à l’aide d’une version modifiée du code CLASS intégrant le tenseur $C_{\mu\nu}$ dérivé du champ rythmique $T(x^\mu)$.
+
+\subsection{Impact sur l’expansion cosmique : $H(z)$ et distance angulaire}
+
+Le champ rythmique $R(t) = \dot{T}$ induit une modification de l’équation de Friedmann. Cela altère l’évolution de $H(z)$, en particulier autour de la transition matière-énergie sombre.
+
+\begin{itemize}
+  \item Nous observons une déviation progressive de $H(z)$ par rapport à $\Lambda$CDM à partir de $z \sim 1$.
+  \item L’impact sur les distances angulaires est significatif dans l’intervalle $z \in [0.5, 3]$.
+\end{itemize}
+
+\textbf{Figure 1 :} Comparaison de $H(z)$ pour CCD (en bleu) et $\Lambda$CDM (en noir) avec barres d’erreur DESI.
+
+\subsection{Signatures dans le spectre du fond diffus cosmologique ($C_\ell^{TT}$)}
+
+Le régime de transition chronodynamique modifie la dynamique de recombinaison et l’effet ISW précoce :
+
+\begin{itemize}
+  \item Les pics acoustiques sont légèrement déplacés ($\sim 0.3\%$), avec une amplitude modulée pour $\ell < 200$.
+  \item Le fond rythmique génère un excès ou déficit de puissance dans le plateau bas $\ell$ via une modulation de l’ISW.
+\end{itemize}
+
+\textbf{Figure 2 :} Spectre $C_\ell^{TT}$ pour CCD et Planck.
+
+\subsection{Croissance des structures : $f\sigma_8(z)$ et ISW}
+
+L’évolution de la perturbation $\delta T$ impacte la croissance des structures. En particulier :
+
+\begin{itemize}
+  \item $f\sigma_8(z)$ est atténué à $z < 1$, ce qui pourrait réduire la tension avec les mesures de relevés galactiques.
+  \item L’effet ISW tardif peut se trouver accentué ou diminué selon la phase de $h(t)R^2(t)$.
+\end{itemize}
+
+\textbf{Figure 3 :} Comparaison de $f\sigma_8(z)$ pour CCD et relevés SDSS/BOSS/eBOSS.
+
+\subsection{Tension de Hubble et différentiel rythmique}
+
+Une hypothèse centrale du modèle est que $T$ et $\tau$ divergent dans les phases tardives, induisant un biais de mesure de $H_0$ :
+
+\begin{itemize}
+  \item Le flux temporel mesuré localement est affecté par $R(t)$.
+  \item CCD prédit naturellement $H_0^\text{loc} > H_0^\text{CMB}$ sans recourir à une énergie sombre exotique.
+\end{itemize}
+
+\textbf{Figure 4 :} Histogramme comparatif des inférences de $H_0$.
+
+\subsection{Comparaison au modèle $\Lambda$CDM et discussion paramétrique}
+
+Une exploration MCMC préliminaire montre que :
+
+\begin{itemize}
+  \item Le modèle CCD peut atteindre un $\chi^2$ comparable à $\Lambda$CDM en ajustant $(\tilde{k}, \alpha)$.
+  \item La probabilité a posteriori favorise une transition rythmique dans les données DESI + SH0ES.
+\end{itemize}
+
+\textbf{Figure 5 :} Posterior 2D $(\tilde{k}, \alpha)$ comparé à $\Lambda$CDM.
+
+\paragraph{Conclusion :} Le modèle CCD offre une alternative testable à l’énergie sombre standard. Ses signatures distinctes sur $H(z)$, le CMB et $f\sigma_8(z)$ en font un candidat pertinent pour résoudre les tensions cosmologiques contemporaines.

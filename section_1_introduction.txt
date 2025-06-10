@@ -1,0 +1,17 @@
+\section{Introduction}
+
+Les observations cosmologiques contemporaines ont établi avec une remarquable précision le cadre du modèle standard \(\Lambda\)CDM : un Univers dominé par une énergie noire constante \(\Lambda\), une matière noire froide, et une géométrie globalement plate. Toutefois, plusieurs tensions statistiques, persistantes malgré l'amélioration des jeux de données (Planck, SH0ES, DESI), suggèrent la nécessité d'un cadre théorique élargi. Parmi celles-ci, la tension sur la constante de Hubble \(H_0\), les fluctuations en \(\sigma_8\), et la formation précoce de galaxies massives pointent vers une physique manquante dans le paradigme standard.
+
+Dans cette perspective, nous proposons un changement de paradigme fondé non sur une nouvelle forme d'énergie ou de matière, mais sur une modification fondamentale de la structure temporelle de la cosmologie : la \textit{chronodynamique cosmologique} (CCD). L'idée centrale est que le temps cosmique \(t\) n'est pas un simple paramètre d'évolution, mais une entité physique porteuse d'une dynamique intrinsèque, incarnée dans un champ scalaire objectif \(T(x^\mu)\).
+
+Ce champ définit un rythme universel \(R(x)\), dont les variations influencent la géométrie via un tenseur additionnel \(C_{\mu\nu}\) qui modifie les équations d'Einstein. Ce terme induit une structure dynamique qui peut générer des régimes d'expansion distincts, offrant une interprétation unifiée de l'accélération cosmique, de l'inflation effective, et des tensions observationnelles actuelles.
+
+L'objectif de cet article est de :
+\begin{itemize}
+    \item formuler rigoureusement le cadre dynamique du CCD,
+    \item en dériver les équations cosmologiques à la fois dans les régimes homogènes et perturbés,
+    \item confronter ses prédictions aux données observationnelles actuelles,
+    \item discuter ses implications théoriques profondes pour la notion de temps en relativité générale.
+\end{itemize}
+
+Nous allons tout d'abord poser la structure du modèle CCD dans sa version la plus simple, avant d'en dériver une version covariante complète et testable à la fois numériquement et conceptuellement.

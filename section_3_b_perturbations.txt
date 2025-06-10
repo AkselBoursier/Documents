@@ -1,0 +1,33 @@
+\section{Perturbations Lin\'eaires du Champ Rythmique en G\'eom\'etrie FLRW}
+
+Dans le cadre d’un espace-temps FLRW perturb\'e, nous consid\'erons la m\'etrique scalairement perturb\'ee en jauge de Newton :
+\begin{equation}
+    ds^2 = -(1+2\Phi) dt^2 + a^2(t)(1-2\Psi) \delta_{ij} dx^i dx^j,
+\end{equation}
+où \(\Phi\) et \(\Psi\) sont les potentiels de Bardeen.
+
+Le champ temporel est d\'evelopp\'e en mode de fond et perturbation scalaire :
+\begin{equation}
+    T(x^\mu) = T_0(t) + \delta T(t,\vec{x}).
+\end{equation}
+
+Sa d\'eriv\'ee temporelle donne le rythme :
+\begin{equation}
+    R^2 = -g^{\mu\nu} \partial_\mu T \partial_\nu T \Rightarrow R_0^2 = \dot{T}_0^2,
+\end{equation}
+\begin{equation}
+    \delta R^2 = 2\dot{T}_0 (\delta \dot{T} - \dot{T}_0 \Phi).
+\end{equation}
+
+Le tenseur \(C_{\mu\nu}\) \`a l’ordre perturbatif g\'en\'ere :
+\begin{align}
+    \delta C_{00} &= \alpha \left[ \dot{T}_0 \delta \dot{T} - \dot{T}_0^2 \Phi \right] + V'(T_0)\delta T, \\
+    \delta C_{0i} &= \alpha \dot{T}_0 \partial_i \delta T, \\
+    \delta C_{ij} &= \alpha \left[ \dot{T}_0^2 \Phi - \dot{T}_0 \delta \dot{T} \right] \delta_{ij} + V'(T_0)\delta T \delta_{ij}.
+\end{align}
+
+Ces termes modifient les \'equations de perturbation gravitationnelle. En particulier, l’\'equation de Poisson devient :
+\begin{equation}
+    k^2\Phi = 4\pi G a^2 \left( \delta \rho_m + \delta C^0_0 \right),
+\end{equation}
+et les \'equations de croissance de structure s’en trouvent alt\'er\'ees, ce qui affecte \(f\sigma_8(z)\), l’effet ISW, et le spectre CMB \`a grande \'echelle.
